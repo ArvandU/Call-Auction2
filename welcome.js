@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const lastName = document.getElementById('lastName').value;
         
         try {
-            const response = await fetch('http://localhost:5000/register', {
+            const response = await fetch(`${API_BASE_URL}/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

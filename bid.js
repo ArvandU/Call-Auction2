@@ -9,7 +9,7 @@ function pollRoundResult(roundNumber) {
         return;
     }
 
-    fetch(`http://localhost:5000/round_result?participantId=${participantId}&roundNumber=${roundNumber}`)
+    fetch(`${API_BASE_URL}/round_result?participantId=${participantId}&roundNumber=${roundNumber}`)
     .then(response => response.json())
     .then(data => {
          if (data.round_info) {
@@ -68,7 +68,7 @@ document.getElementById('showInfo').addEventListener('click', function(){
        return;
    }
 
-   fetch(`http://localhost:5000/participant_info?participantId=${participantId}`)
+   fetch(`${API_BASE_URL}/participant_info?participantId=${participantId}`)
        .then(response => response.json())
        .then(data => {
            if(data.error){
@@ -111,7 +111,7 @@ document.getElementById('bidForm').addEventListener('submit', function(e){
         return;
     }
     
-    fetch('http://localhost:5000/bid_submit', {
+    fetch(`${API_BASE_URL}/bid_submit`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({ participantId, bids })

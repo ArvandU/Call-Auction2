@@ -2,38 +2,52 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>حراج - ثبت پیشنهاد</title>
+    <title>صفحه پیشنهاد</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>ثبت پیشنهاد (دور <span id="currentRound">۱</span>)</h1>
-        <button id="showInfo">نمایش اطلاعات شرکت‌کننده</button>
-        <div id="participantInfo" style="display:none;"></div>
-        <div id="lastRoundResults">
-            <!-- نتایج دور قبلی اینجا نمایش داده می‌شود -->
-        </div>
-        <form id="bidForm">
-            <!-- Hidden field for participant ID -->
-            <input type="hidden" id="participantId">
-            <label>نوع پیشنهاد:
-                <select id="type">
-                    <option value="bid">پیشنهاد خرید</option>
-                    <option value="ask">پیشنهاد فروش</option>
-                </select>
-            </label>
-            <!-- Multiple bid/offer entries -->
-            <div id="bidEntries">
-                <div class="bid-entry">
-                    <label>قیمت: <input type="number" class="price" step="0.01" required></label>
-                    <label>تعداد: <input type="number" class="quantity" required></label>
-                </div>
+        <h1>صفحه پیشنهاد</h1>
+        <div class="auction-info">
+            <div class="info-card">
+                <h2>اطلاعات دور فعلی</h2>
+                <p><strong>دور:</strong> <span id="currentRound"></span></p>
+                <p><strong>زمان باقی‌مانده:</strong> <span id="timeLeft"></span></p>
             </div>
-            <button type="button" id="addBid">افزودن پیشنهاد جدید</button>
-            <button type="submit">ثبت پیشنهادات</button>
-        </form>
+            <div class="info-card">
+                <h2>اطلاعات شرکت کننده</h2>
+                <p><strong>نام:</strong> <span id="firstName"></span></p>
+                <p><strong>نام خانوادگی:</strong> <span id="lastName"></span></p>
+                <p><strong>شناسه شرکت کننده:</strong> <span id="participantId"></span></p>
+            </div>
+        </div>
+        <div class="bid-form">
+            <h2>ثبت پیشنهاد</h2>
+            <form id="bidForm">
+                <div class="form-group">
+                    <label>مقدار پیشنهادی:</label>
+                    <input type="number" id="bidAmount" required min="0" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label>نوع پیشنهاد:</label>
+                    <select id="bidType" required>
+                        <option value="buy">خرید</option>
+                        <option value="sell">فروش</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">ثبت پیشنهاد</button>
+            </form>
+        </div>
+        <div class="bid-list">
+            <h2>پیشنهادات شما</h2>
+            <ul id="bidsList"></ul>
+        </div>
+        <div class="action-buttons">
+            <a href="info.html" class="btn btn-secondary">بازگشت</a>
+        </div>
     </div>
+    <script src="config.js"></script>
     <script src="bid.js"></script>
 </body>
 </html>

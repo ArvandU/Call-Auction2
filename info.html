@@ -2,18 +2,33 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>اطلاعات آزمایش حراج</title>
+    <title>اطلاعات شرکت کننده</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>اطلاعات آزمایش حراج</h1>
-        <div id="infoBox">
-            <!-- اطلاعات شرکت‌کننده اینجا نمایش داده می‌شود -->
+        <h1>اطلاعات شرکت کننده</h1>
+        <div class="participant-info">
+            <div class="info-card">
+                <h2>اطلاعات شخصی</h2>
+                <p><strong>نام:</strong> <span id="firstName"></span></p>
+                <p><strong>نام خانوادگی:</strong> <span id="lastName"></span></p>
+                <p><strong>شناسه شرکت کننده:</strong> <span id="participantId"></span></p>
+            </div>
+            <div class="info-card">
+                <h2>اطلاعات حراج</h2>
+                <p><strong>نوع حراج:</strong> حراج نوع اول</p>
+                <p><strong>تعداد دورها:</strong> <span id="totalRounds"></span></p>
+                <p><strong>دور فعلی:</strong> <span id="currentRound"></span></p>
+            </div>
         </div>
-        <button id="proceedBtn">ادامه به صفحه پیشنهاد</button>
+        <div class="action-buttons">
+            <a href="bid.html" class="btn">شروع حراج</a>
+            <a href="index.html" class="btn btn-secondary">بازگشت</a>
+        </div>
     </div>
+    <script src="config.js"></script>
     <script src="info.js"></script>
 </body>
 </html>

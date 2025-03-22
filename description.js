@@ -11,7 +11,7 @@ document.getElementById('descriptionForm').addEventListener('submit', function(e
         return;
     }
 
-    fetch('http://localhost:5000/submit_description', {
+    fetch(`${API_BASE_URL}/submit_description`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({ participantId, answer1, answer2 })

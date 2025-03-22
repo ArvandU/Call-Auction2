@@ -1,0 +1,212 @@
+:root {
+    --primary-blue: #1e88e5;
+    --secondary-blue: #64b5f6;
+    --primary-brown: #795548;
+    --secondary-brown: #a1887f;
+    --light-blue: #e3f2fd;
+    --light-brown: #efebe9;
+    --white: #ffffff;
+    --text-dark: #333333;
+}
+
+body {
+    font-family: 'Vazir', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, var(--light-blue), var(--light-brown));
+    min-height: 100vh;
+    color: var(--text-dark);
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/farmers-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.option-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+}
+
+.option-card img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.option-card h2 {
+    color: var(--primary-blue);
+    margin: 15px 0;
+    font-size: 1.5em;
+}
+
+.option-card p {
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.registration-form {
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--light-blue);
+    border-radius: 10px;
+}
+
+.registration-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.registration-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    color: var(--text-dark);
+}
+
+.registration-form input {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid var(--primary-blue);
+    border-radius: 5px;
+    font-family: 'Vazir', sans-serif;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: 'Vazir', sans-serif;
+}
+
+.admin-panel .btn {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.call-auction .btn {
+    background: var(--primary-brown);
+    color: var(--white);
+    width: 100%;
+}
+
+.all-in-auction .btn {
+    background: var(--secondary-blue);
+    color: var(--white);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 200px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .registration-form {
+        padding: 15px;
+    }
+}
+
+/* Form Styles */
+form {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 15px 0;
+    color: var(--text-dark);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--light-blue);
+    border-radius: 8px;
+    font-family: 'Vazir', sans-serif;
+    font-size: 1em;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+button {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Vazir', sans-serif;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--secondary-blue);
+    transform: scale(1.05);
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>سیستم حراج آب</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>سیستم حراج آب</h1>
+            <p>به سیستم حراج آب خوش آمدید</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="options-grid">
+            <div class="option-card admin-panel">
+                <img src="images/admin-icon.png" alt="پنل ادمین">
+                <h2>پنل ادمین</h2>
+                <p>ورود به پنل مدیریت حراج</p>
+                <a href="admin/login.html" class="btn">ورود به پنل ادمین</a>
+            </div>
+            
+            <div class="option-card call-auction">
+                <img src="images/call-auction-icon.png" alt="حراج نوع اول">
+                <h2>حراج نوع اول</h2>
+                <p>شرکت در حراج نوع اول</p>
+                <div class="registration-form">
+                    <form id="registerForm">
+                        <label>نام: <input type="text" id="firstName" required></label>
+                        <label>نام خانوادگی: <input type="text" id="lastName" required></label>
+                        <button type="submit" class="btn">شروع حراج نوع اول</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="option-card all-in-auction">
+                <img src="images/all-in-icon.png" alt="حراج نوع دوم">
+                <h2>حراج نوع دوم</h2>
+                <p>شرکت در حراج نوع دوم</p>
+                <a href="#" class="btn">شروع حراج نوع دوم</a>
+            </div>
+        </div>
+    </div>
+    <script src="welcome.js"></script>
+</body>
+</html>

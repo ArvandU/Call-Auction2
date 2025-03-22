@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>حراج - ثبت پیشنهاد</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>ثبت پیشنهاد (دور <span id="currentRound">۱</span>)</h1>
+        <button id="showInfo">نمایش اطلاعات شرکت‌کننده</button>
+        <div id="participantInfo" style="display:none;"></div>
+        <div id="lastRoundResults">
+            <!-- نتایج دور قبلی اینجا نمایش داده می‌شود -->
+        </div>
+        <form id="bidForm">
+            <!-- Hidden field for participant ID -->
+            <input type="hidden" id="participantId">
+            <label>نوع پیشنهاد:
+                <select id="type">
+                    <option value="bid">پیشنهاد خرید</option>
+                    <option value="ask">پیشنهاد فروش</option>
+                </select>
+            </label>
+            <!-- Multiple bid/offer entries -->
+            <div id="bidEntries">
+                <div class="bid-entry">
+                    <label>قیمت: <input type="number" class="price" step="0.01" required></label>
+                    <label>تعداد: <input type="number" class="quantity" required></label>
+                </div>
+            </div>
+            <button type="button" id="addBid">افزودن پیشنهاد جدید</button>
+            <button type="submit">ثبت پیشنهادات</button>
+        </form>
+    </div>
+    <script src="bid.js"></script>
+</body>
+</html>

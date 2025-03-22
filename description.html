@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>توضیحات آزمایش حراج</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>توضیحات آزمایش حراج</h1>
+        <p>لطفاً دستورالعمل‌ها را با دقت بخوانید و به سوالات زیر پاسخ دهید.</p>
+        <form id="descriptionForm">
+            <label>سوال ۱:
+                <textarea id="answer1" required placeholder="پاسخ خود را اینجا بنویسید..."></textarea>
+            </label>
+            <label>سوال ۲:
+                <textarea id="answer2" required placeholder="پاسخ خود را اینجا بنویسید..."></textarea>
+            </label>
+            <!-- Hidden field for participant ID -->
+            <input type="hidden" id="participantId">
+            <button type="submit">ارسال پاسخ‌ها</button>
+        </form>
+    </div>
+    <script src="description.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
         return;
     }
 
-    fetch(`http://localhost:5000/final_tokens?participantId=${participantId}`)
+    fetch(`${API_BASE_URL}/final_tokens?participantId=${participantId}`)
     .then(response => response.json())
     .then(data => {
         if(data.error){
